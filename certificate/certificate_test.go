@@ -98,5 +98,5 @@ func verifyHostname(cert tls.Certificate) error {
 	if cert.Leaf == nil {
 		return errors.New("expected leaf cert")
 	}
-	return cert.Leaf.VerifyHostname("APNS/2 Development IOS Push Services: com.sideshow.Apns2")
+	return cert.Leaf.VerifyHostname("APNS/2 Development IOS Push Services: com.unmute.Apns2")
 }

@@ -137,8 +137,7 @@ func (c *Client) Push(n *Notification) (*Response, error) {
 	}
 
 	setHeaders(req, n)
-
-	httpRes, err := c.requestWithContext(ctx, req)
+	httpRes, err := c.HTTPClient.Do(req)
 	if err != nil {
 		return nil, err
 	}

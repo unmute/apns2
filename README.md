@@ -4,7 +4,7 @@ NOTE: This is an experimental branch for the purpose of testing the new token ba
 
 APNS/2 is a go package designed for simple, flexible and fast Apple Push Notifications on iOS, OSX and Safari using the new HTTP/2 Push provider API.
 
-[![Build Status](https://travis-ci.org/sideshow/apns2.svg?branch=master)](https://travis-ci.org/sideshow/apns2)  [![Coverage Status](https://coveralls.io/repos/sideshow/apns2/badge.svg?branch=master&service=github)](https://coveralls.io/github/sideshow/apns2?branch=master)  [![GoDoc](https://godoc.org/github.com/unmute/apns2?status.svg)](https://godoc.org/github.com/unmute/apns2)
+[![Build Status](https://travis-ci.org/unmute/apns2.svg?branch=master)](https://travis-ci.org/unmute/apns2)  [![Coverage Status](https://coveralls.io/repos/unmute/apns2/badge.svg?branch=master&service=github)](https://coveralls.io/github/unmute/apns2?branch=master)  [![GoDoc](https://godoc.org/github.com/unmute/apns2?status.svg)](https://godoc.org/github.com/unmute/apns2)
 
 ## Features
 
@@ -53,7 +53,7 @@ func main() {
 
   notification := &apns2.Notification{}
   notification.DeviceToken = "11aa01229f15f0f0c52029d8cf8cd0aeaf2365fe4cebc4af26cd6d76b7919ef7"
-  notification.Topic = "com.sideshow.Apns2"
+  notification.Topic = "com.unmute.Apns2"
   notification.Payload = []byte(`{"aps":{"alert":"Hello!"}}`) // See Payload section below
 
   client := apns2.NewClient(cert).Production()
@@ -74,7 +74,7 @@ At a minimum, a _Notification_ needs a _DeviceToken_, a _Topic_ and a _Payload_.
 ```go
 notification := &apns2.Notification{
   DeviceToken: "11aa01229f15f0f0c52029d8cf8cd0aeaf2365fe4cebc4af26cd6d76b7919ef7",
-  Topic: "com.sideshow.Apns2",
+  Topic: "com.unmute.Apns2",
   Payload: []byte(`{"aps":{"alert":"Hello!"}}`),
 }
 ```
